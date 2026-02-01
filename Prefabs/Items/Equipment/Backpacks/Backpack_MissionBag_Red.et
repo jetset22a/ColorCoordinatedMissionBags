@@ -11,5 +11,13 @@ GenericEntity : "{4B1A4CE59FE567E5}Prefabs/Items/Equipment/Backpacks/Backpack_Mi
     }
    }
   }
+  BaseLoadoutClothComponent "{511E9C6ADE70F7BB}" {
+   BlockedSlots {
+    LoadoutArmoredVestSlotArea "{68832A55F8E9AEE3}" {
+    }
+    LoadoutVestArea "{68832A55FEAA9559}" {
+    }
+   }
+  }
  }
 }
