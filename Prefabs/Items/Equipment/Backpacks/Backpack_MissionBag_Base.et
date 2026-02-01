@@ -13,18 +13,13 @@ GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
     ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
      Weight 3.63
      SizeSetupStrategy Manual
-     ItemDimensions 25 25 25
+     ItemDimensions 30 30 30
      ItemVolume 25001
-    }
-    CustomAttributes {
-     PreviewRenderAttributes "{52BCBDD2B54658EC}" {
-      CameraOrbitAngles 25 -25 180
-     }
     }
    }
    UseCapacityCoefficient 0
    CapacityCoefficient 1.26
-   MaxCumulativeVolume 15000
+   MaxCumulativeVolume 25000
    MaxItemSize 30 30 30
    m_fMaxWeight 60
   }
