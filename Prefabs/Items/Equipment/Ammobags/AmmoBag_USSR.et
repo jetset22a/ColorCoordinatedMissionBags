@@ -1,0 +1,8 @@
+GenericEntity : "{95E01499CD27B8E0}Prefabs/Props/Military/AmmoBoxes/AmmoBag_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{5561998DBFCF39F9}Assets/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_USSR.xob"
+  }
+ }
+}

@@ -1,0 +1,83 @@
+GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   ResponseIndex "TinyDestructible"
+   Static 1
+  }
+  SCR_SoundDataComponent "{5C53391603B5CF41}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{5C5339160C8869E2}" {
+     m_sSoundProject "{1A1F49248284A1CF}Sounds/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd/Props_AmmoBox_81mm_mortar_3rnd.acp"
+    }
+    SCR_AudioSourceConfiguration "{5C533916090D28B6}" {
+     m_sSoundProject "{1A1F49248284A1CF}Sounds/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd/Props_AmmoBox_81mm_mortar_3rnd.acp"
+    }
+   }
+  }
+  SCR_SupportStationGadgetComponent "{688C070D3572E54B}" {
+   m_eAnimVariable ADRIANOV
+  }
+  SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   Attributes SCR_ItemAttributeCollection "{5476CDB2EAD8225E}" {
+    ItemDisplayName SCR_InventoryUIInfo "{54F48AF1F3C103C1}" {
+     Name "#AR-EditableEntity_AmmoBox_556x45_840rnd_Name"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{688C070DE0CF624A}" {
+     Weight 1
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{688C070DC5D44E85}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{688C070D3BCCC6BE}" {
+       AnimGraph "{44A1E0130301E5F5}Assets/Items/Equipment/workspaces/MedicalKit_supplies.agr"
+       AnimInstance "{A9CBB5C81F08B71B}Assets/Items/Equipment/workspaces/MedicalKit_supplies.asi"
+       BindingName "Gadget"
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{688C070DA4683996}" {
+      CameraPreset Left
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 1.5
+      FOV 12
+      AspectRatio 1
+      LodModel 1
+     }
+     CharacterModifierAttributes "{688C070D19E2B6A9}" {
+     }
+    }
+   }
+   UseCapacityCoefficient 0
+   MaxItemSize 20 10 10
+   m_fMaxWeight 15
+  }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   ActionContexts {
+    UserActionContext "{5476B36C47B0461A}" {
+     Position PointInfo "{5476B36C45ADDA89}" {
+      Offset 0 0.0989 0
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{689A4435E445B99D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{689A4435DC596CA7}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+    CPG_StoreAllMagazinesUserAction "{689A443537C3DE5E}" {
+     UIInfo SCR_ActionUIInfo "{689A44352392027E}" {
+      Name "Store All Magazines"
+     }
+     Duration 2
+     "Sort Priority" 1
+    }
+   }
+  }
+ }
+ coords 3112.856 15.999 2743.287
+}
