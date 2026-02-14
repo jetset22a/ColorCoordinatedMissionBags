@@ -3,9 +3,9 @@ GenericEntity : "{4B1A4CE59FE567E5}Prefabs/Items/Equipment/Backpacks/Backpack_Mi
  components {
   MeshObject "{511E9C6ADE70F7BD}" {
    Materials {
-    MaterialAssignClass "{689B4C75035F593A}" {
+    MaterialAssignClass "{689B4C7433E1F047}" {
      SourceMaterial "Backpack_TeamWeaponBag_mat"
-     AssignedMaterial "{2DF900A321780E41}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Soviet.emat"
+     AssignedMaterial "{2864084899EB8804}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Black.emat"
     }
    }
   }
@@ -21,15 +21,15 @@ GenericEntity : "{4B1A4CE59FE567E5}Prefabs/Items/Equipment/Backpacks/Backpack_Mi
   }
   BaseLoadoutClothComponent "{511E9C6ADE70F7BB}" {
    WornMaterialsOverride {
-    "{2DF900A321780E41}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Soviet.emat"
+    "{2864084899EB8804}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Black.emat"
    }
    ItemMaterialsOverride {
-    "{2DF900A321780E41}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Soviet.emat"
+    "{2864084899EB8804}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_Black.emat"
    }
    BlockedSlots {
-    LoadoutArmoredVestSlotArea "{68832A55F8E9AEE3}" {
+    LoadoutArmoredVestSlotArea "{689B4C74E2F20DA6}" {
     }
-    LoadoutVestArea "{68832A55FEAA9559}" {
+    LoadoutVestArea "{689B4C74E2F20DBD}" {
     }
    }
   }

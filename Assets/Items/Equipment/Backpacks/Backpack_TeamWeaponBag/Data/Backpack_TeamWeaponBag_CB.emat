@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0.539 0.317 0.104 1
+ BCRMap "{35ECA36DDE518B3A}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_USSR_BCR.edds"
+ NMOMap "{0D3418FF0726D9A4}Assets/Items/Equipment/Backpacks/Backpack_TeamWeaponBag/Data/Backpack_TeamWeaponBag_USSR_NMO.edds"
+}
