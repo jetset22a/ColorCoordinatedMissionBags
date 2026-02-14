@@ -1,25 +1,23 @@
-class CPG_BaseStoreAllUserAction : ScriptedUserAction {
+class CPG_BaseStoreAllComponentUserAction : ScriptedUserAction {
 	array<string> GetProtectedStorageNames() {
 		return {};
 	}
 	
-	array<ECommonItemType> GetItemTypesToStore() {
+	array<typename> GetComponentTypeNameToStore() {
 		return {};
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{		
 		SCR_InventoryStorageManagerComponent userStorageManager = SCR_InventoryStorageManagerComponent.Cast(pUserEntity.FindComponent(SCR_InventoryStorageManagerComponent));
 		if(!userStorageManager) {
-			SCR_HintManagerComponent.GetInstance().ShowCustomHint("SCR_InventoryStorageManagerComponent not found", "TEST GROUND", 3.0);
 			Print("SCR_InventoryStorageManagerComponent not found", LogLevel.NORMAL);
 			return;
 		}	
 		
 		BaseInventoryStorageComponent ownerStorageComponent = BaseInventoryStorageComponent.Cast(pOwnerEntity.FindComponent(BaseInventoryStorageComponent));
 		if(!ownerStorageComponent) {
-			SCR_HintManagerComponent.GetInstance().ShowCustomHint("ownerStorageComponent not found", "TEST GROUND", 3.0);
 			Print("ownerStorageComponent not found", LogLevel.NORMAL);
 			return;
 		}
@@ -28,7 +26,6 @@ class CPG_BaseStoreAllUserAction : ScriptedUserAction {
 		userStorageManager.GetStorages(storages);
 		
 		foreach(BaseInventoryStorageComponent storage : storages) {
-			Print(storage.ClassName());
 			if(GetProtectedStorageNames().Contains(storage.ClassName())) {
 				continue;
 			}
@@ -36,12 +33,12 @@ class CPG_BaseStoreAllUserAction : ScriptedUserAction {
 			storage.GetAll(items);
 			
 			foreach(IEntity item : items) {
-				InventoryItemComponent inventoryItemComponent = InventoryItemComponent.Cast(item.FindComponent(InventoryItemComponent));
-				if(inventoryItemComponent && inventoryItemComponent.GetAttributes()) {
-					ECommonItemType itemType = inventoryItemComponent.GetAttributes().GetCommonType();
-					if(GetItemTypesToStore().Contains(itemType)) {
+				foreach(typename type : GetComponentTypeNameToStore()) {
+					if(item.FindComponent(type)) {
 						if(!userStorageManager.TryMoveItemToStorage(item, ownerStorageComponent)) {
 							return;
+						} else {
+							break;
 						}
 					}
 				}
@@ -54,7 +51,6 @@ class CPG_BaseStoreAllUserAction : ScriptedUserAction {
 	{
 		SCR_InventoryStorageManagerComponent userStorageManager = SCR_InventoryStorageManagerComponent.Cast(user.FindComponent(SCR_InventoryStorageManagerComponent));
 		if(!userStorageManager) {
-			SCR_HintManagerComponent.GetInstance().ShowCustomHint("SCR_InventoryStorageManagerComponent not found", "TEST GROUND", 3.0);
 			Print("SCR_InventoryStorageManagerComponent not found", LogLevel.NORMAL);
 			return false;
 		}
@@ -63,14 +59,15 @@ class CPG_BaseStoreAllUserAction : ScriptedUserAction {
 		userStorageManager.GetStorages(storages);
 		
 		foreach(BaseInventoryStorageComponent storage : storages) {
+			if(GetProtectedStorageNames().Contains(storage.ClassName())) {
+				continue;
+			}
 			array<IEntity> items = {};
 			storage.GetAll(items);
 			
 			foreach(IEntity item : items) {
-				InventoryItemComponent inventoryItemComponent = InventoryItemComponent.Cast(item.FindComponent(InventoryItemComponent));
-				if(inventoryItemComponent && inventoryItemComponent.GetAttributes()) {
-					ECommonItemType itemType = inventoryItemComponent.GetAttributes().GetCommonType();
-					if(GetItemTypesToStore().Contains(itemType)) {
+				foreach(typename type : GetComponentTypeNameToStore()) {
+					if(item.FindComponent(type)) {
 						return true;
 					}
 				}
