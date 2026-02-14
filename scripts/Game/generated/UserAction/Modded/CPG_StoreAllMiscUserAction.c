@@ -1,6 +1,6 @@
 class CPG_StoreAllMiscUserAction : CPG_BaseStoreAllUserAction {
-	array<string> GetProtectedStorageNames() {
-		return {};
+	override array<string> GetProtectedStorageNames() {
+		return {"SCR_CharacterInventoryStorageComponent", "SCR_EquipmentStorageComponent"};
 	}
 	
 	override array<ECommonItemType> GetItemTypesToStore() {

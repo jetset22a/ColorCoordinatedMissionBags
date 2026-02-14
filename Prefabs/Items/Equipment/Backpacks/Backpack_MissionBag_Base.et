@@ -62,6 +62,16 @@ GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
      Duration 2
      "Sort Priority" 2
     }
+    CPG_StoreAllMiscUserAction "{689D33499854AA96}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{689D3349956437CF}" {
+      Name "Store All Misc. Equipment"
+     }
+     Duration 2
+     "Sort Priority" 3
+    }
    }
   }
  }
