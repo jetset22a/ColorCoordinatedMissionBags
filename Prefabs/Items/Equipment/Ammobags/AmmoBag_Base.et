@@ -55,6 +55,8 @@ GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
    MaxItemSize 20 10 10
    m_fMaxWeight 15
   }
+  SCR_InventoryStorageManagerComponent "{689F41F6E7EB97D4}" {
+  }
   ActionsManagerComponent "{5476B36C403D4CC0}" {
    ActionContexts {
     UserActionContext "{5476B36C47B0461A}" {
@@ -78,6 +80,22 @@ GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
      }
      Duration 2
      "Sort Priority" 1
+    }
+    CPG_TakeMagazineUserAction "{689F41F56194BE54}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{689F41F567D72018}" {
+     }
+     "Sort Priority" 2
+    }
+    CPG_TakeGrenadeUserAction "{689F466AABFBA62E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{689F466AAE9F8ABD}" {
+     }
+     "Sort Priority" 3
     }
    }
   }
