@@ -5,6 +5,10 @@ GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
    ResponseIndex "TinyDestructible"
    Static 1
   }
+  EPF_PersistenceComponent "{6894388F8D2EA0FB}" {
+   m_pSaveData EPF_ItemSaveDataClass "{6894388F86E5BB5F}" {
+   }
+  }
   SCR_SoundDataComponent "{5C53391603B5CF41}" {
    m_aAudioSourceConfiguration {
     SCR_AudioSourceConfiguration "{5C5339160C8869E2}" {

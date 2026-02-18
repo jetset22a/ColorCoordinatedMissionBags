@@ -54,11 +54,6 @@ class CPG_TakeItemUserAction : ScriptedUserAction {
 		
 		m_UserNumOfItems = userStorageManager.CountItem(GetSearchPredicate(null));
 		
-		if (!userStorageManager.IsAnimationReady())
-		{
-			return false;
-		}
-		
 		return true;
 	}
 	
