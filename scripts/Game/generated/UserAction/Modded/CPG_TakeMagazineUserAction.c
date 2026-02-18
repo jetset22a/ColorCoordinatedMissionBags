@@ -12,7 +12,7 @@ class CPG_TakeMagazineUserAction : CPG_TakeItemUserAction {
 			Print("SCR_CharacterInventoryStorageComponent not found", LogLevel.NORMAL);
 			return;
 		}
-		Print("hello");
+		
 		BaseInventoryStorageComponent weaponStorage = userStorageComponent.GetWeaponStorage();
 		if(weaponStorage) {
 			IEntity weapon = weaponStorage.Get(0);

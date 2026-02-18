@@ -18,6 +18,12 @@ class CPG_TakeItemUserAction : ScriptedUserAction {
 			return;
 		}
 		
+		SCR_CharacterControllerComponent characterControllerComponent = SCR_CharacterControllerComponent.Cast(pUserEntity.FindComponent(SCR_CharacterControllerComponent));
+		if(!characterControllerComponent) {
+			Print("characterControllerComponent not found", LogLevel.NORMAL);
+			return;
+		}
+		
 		SCR_InventoryStorageManagerComponent ownerStorageManager = SCR_InventoryStorageManagerComponent.Cast(pOwnerEntity.FindComponent(SCR_InventoryStorageManagerComponent));
 		if(!ownerStorageManager) {
 			Print("ownerStorageManager not found", LogLevel.NORMAL);
@@ -31,8 +37,8 @@ class CPG_TakeItemUserAction : ScriptedUserAction {
 		}
 		
 		BaseInventoryStorageComponent storage = userStorageManager.FindStorageForItem(item);
-		if(storage) {
-			ownerStorageManager.TryMoveItemToStorage(item, storage);
+		if(storage && ownerStorageManager.TryMoveItemToStorage(item, storage)) {
+			characterControllerComponent.TryPlayItemGesture(EItemGesture.EItemGesturePickUp);
 		}
 		
 	}
@@ -47,6 +53,11 @@ class CPG_TakeItemUserAction : ScriptedUserAction {
 		}
 		
 		m_UserNumOfItems = userStorageManager.CountItem(GetSearchPredicate(null));
+		
+		if (!userStorageManager.IsAnimationReady())
+		{
+			return false;
+		}
 		
 		return true;
 	}
