@@ -1,13 +1,17 @@
 GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
  ID "F0DBA538AC2A0552"
  components {
+  EPF_PersistenceComponent "{6894388F8D2EA0FB}" {
+   m_pSaveData EPF_ItemSaveDataClass "{6894388F86E5BB5F}" {
+    m_aComponents {
+     EPF_BaseInventoryStorageComponentSaveDataClass "{68A56D1C87AC7700}" {
+     }
+    }
+   }
+  }
   RigidBody "{5872F0EB7DFB5A9D}" {
    ResponseIndex "TinyDestructible"
    Static 1
-  }
-  EPF_PersistenceComponent "{6894388F8D2EA0FB}" {
-   m_pSaveData EPF_ItemSaveDataClass "{6894388F86E5BB5F}" {
-   }
   }
   SCR_SoundDataComponent "{5C53391603B5CF41}" {
    m_aAudioSourceConfiguration {
