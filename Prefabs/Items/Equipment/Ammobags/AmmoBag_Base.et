@@ -35,7 +35,7 @@ GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
     ItemPhysAttributes ItemPhysicalAttributes "{688C070DE0CF624A}" {
      Weight 1
      SizeSetupStrategy Volume
-     ItemVolume 1001
+     ItemVolume 2001
     }
     ItemAnimationAttributes ItemAnimationAttributes "{688C070DC5D44E85}" {
      AnimationAttachments {
@@ -60,6 +60,7 @@ GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
     }
    }
    UseCapacityCoefficient 0
+   MaxCumulativeVolume 2000
    MaxItemSize 20 10 10
    m_fMaxWeight 15
   }
