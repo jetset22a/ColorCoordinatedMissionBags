@@ -1,0 +1,8 @@
+GenericEntity : "{5E35484674E146ED}Prefabs/Items/Equipment/DuffelBag/DuffelBag_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{5D2891BB3B02BE80}Assets/Items/Equipment/Kits/RearmingKit_01/RearmingKit_01_US.xob"
+  }
+ }
+}

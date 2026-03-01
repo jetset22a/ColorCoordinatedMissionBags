@@ -1,0 +1,80 @@
+GenericEntity : "{42894F191BC9EDE1}Prefabs/Props/Core/AmmoBox_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   ResponseIndex "TinyDestructible"
+   Static 1
+  }
+  SCR_SoundDataComponent "{5C53391603B5CF41}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{5C5339160C8869E2}" {
+     m_sSoundProject "{1A1F49248284A1CF}Sounds/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd/Props_AmmoBox_81mm_mortar_3rnd.acp"
+    }
+    SCR_AudioSourceConfiguration "{5C533916090D28B6}" {
+     m_sSoundProject "{1A1F49248284A1CF}Sounds/Props/Military/AmmoBoxes/AmmoBox_81mm_mortar_3rnd/Props_AmmoBox_81mm_mortar_3rnd.acp"
+    }
+   }
+  }
+  SCR_SupportStationGadgetComponent "{68B83322FC9C26E8}" {
+   m_eAnimVariable ADRIANOV
+  }
+  SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   Attributes SCR_ItemAttributeCollection "{5476CDB2EAD8225E}" {
+    ItemDisplayName SCR_InventoryUIInfo "{54F48AF1F3C103C1}" {
+     Name "Duffel Bag (Placeholder)"
+     Description "Carry Gear"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{68B83322FC9C26C3}" {
+     Weight 1
+     SizeSetupStrategy Volume
+     ItemVolume 3001
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{68B83322FC9C26C0}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{68B83322FC9C26C6}" {
+       AnimGraph "{44A1E0130301E5F5}Assets/Items/Equipment/workspaces/MedicalKit_supplies.agr"
+       AnimInstance "{A9CBB5C81F08B71B}Assets/Items/Equipment/workspaces/MedicalKit_supplies.asi"
+       BindingName "Gadget"
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{68B83322FC9C26CB}" {
+      CameraPreset Left
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 1.5
+      FOV 12
+      AspectRatio 1
+      LodModel 1
+     }
+     CharacterModifierAttributes "{68B83322FC9C26CE}" {
+     }
+    }
+   }
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 5000
+   MaxItemSize 50 50 50
+   m_fMaxWeight 15
+  }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   ActionContexts {
+    UserActionContext "{5476B36C47B0461A}" {
+     Position PointInfo "{5476B36C45ADDA89}" {
+      Offset 0 0.0989 0
+     }
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{68B83322FC9C2636}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{68B83322FC9C2634}" {
+      Name "#AR-Inventory_PickUp"
+     }
+    }
+   }
+  }
+ }
+ coords 3112.856 15.999 2743.287
+}
