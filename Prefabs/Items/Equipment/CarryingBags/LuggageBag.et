@@ -6,9 +6,17 @@ GenericEntity : "{5E35484674E146ED}Prefabs/Items/Equipment/CarryingBags/DuffelBa
   }
   SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
    Attributes SCR_ItemAttributeCollection "{5476CDB2EAD8225E}" {
+    ItemDisplayName SCR_InventoryUIInfo "{54F48AF1F3C103C1}" {
+     Name "Large Briefcase"
+    }
     ItemAnimationAttributes ItemAnimationAttributes "{68B83322FC9C26C0}" {
      HandAdditiveRotation 0 0.2 0
      HandAdditiveTranslation 0 -0.21 -0.02
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{68B83322FC9C26CB}" {
+      CameraDistanceToItem 3
+     }
     }
    }
   }
